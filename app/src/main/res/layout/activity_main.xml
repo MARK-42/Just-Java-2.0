@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+    <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:fillViewport="true"
     tools:context="com.projects.rtk154.justjava2.MainActivity">
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_margin="5dp">
+    android:layout_margin="6dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -20,18 +16,21 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:hint="Enter Your Name"
-                android:layout_weight="1"
-                android:inputType="text"/>
+                android:gravity="bottom"
+                android:layout_weight="0.7"
+                android:inputType="text" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:gravity="center_vertical"
                 android:textSize="20sp"
                 android:text="QUANTITY"/>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:gravity="center_vertical"
                 android:orientation="horizontal">
                 <Button
                     android:layout_width="0dp"
@@ -59,6 +58,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:gravity="center_vertical"
                 android:textSize="20sp"
                 android:layout_marginTop="4dp"
                 android:text="PRICE"/>
@@ -68,6 +68,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.5"
                 android:textSize="25sp"
+                android:gravity="center_vertical"
                 android:layout_marginTop="4dp"
                 android:text="Rs.0"/>
             <TextView
@@ -100,4 +101,3 @@
                 android:layout_weight="1"/>
         </LinearLayout>
     </RelativeLayout>
-</ScrollView>
