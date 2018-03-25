@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         if (quantity > 0)
             displayQuantity(quantity);
         else {
+            quantity=0;
             displayQuantity(0);
             //add toast
         }
@@ -62,7 +63,10 @@ public class MainActivity extends AppCompatActivity {
     {
         TextView tv = (TextView) findViewById(R.id.messageTv);
         tv.setText("..Vaelar Moghulis..");
+        EditText ev = (findViewById(R.id.NameEv));
+        ev.setText("");
         displayPrice(0);
+        quantity=0;
         displayQuantity(0);
     }
 }
