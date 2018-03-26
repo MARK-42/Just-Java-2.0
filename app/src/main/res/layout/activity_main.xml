@@ -1,116 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="4dp"
     tools:context="com.projects.rtk154.justjava2.MainActivity">
     android:layout_margin="6dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_margin="4dp">
-            <EditText
-                android:id="@+id/NameEv"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:hint="Enter Your Name"
-                android:gravity="bottom"
-                android:layout_weight="0.7"
-                android:inputType="text" />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.5"
-                android:gravity="bottom"
-                android:textSize="20sp"
-                android:text="QUANTITY"/>
-            <TextView
-                android:layout_width="160dp"
-                android:layout_height="1dp"
-                android:background="#af736d6d"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="-"
-                    android:layout_weight="1"
-                    android:onClick="decrement"/>
-                <TextView
-                    android:id="@+id/quantityTv"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textSize="26sp"
-                    android:gravity="center"
-                    android:layout_marginTop="4dp"
-                    android:layout_weight="1" />
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="+"
-                    android:onClick="increment"/>
-            </LinearLayout>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.5"
-                android:gravity="bottom"
-                android:textSize="20sp"
-                android:layout_marginTop="4dp"
-                android:text="PRICE"
-                android:defaultFocusHighlightEnabled="true"/>
-            <TextView
-                android:layout_width="160dp"
-                android:layout_height="1dp"
-                android:background="#af736d6d"/>
-            <TextView
-                android:id="@+id/amtTv"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.5"
-                android:textSize="25sp"
-                android:gravity="center"
-                android:layout_marginTop="4dp"
-                android:layout_marginBottom="5dp"
-                android:text="Rs.0"/>
-            <TextView
-                android:id="@+id/messageTv"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:textSize="25sp"
-                android:text="WELCOME"
-                android:gravity="center|top"
-                android:layout_margin="3dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:textSize="20sp"
+        android:padding="3dp"
+        android:text="TOPPINGS"/>
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="1dp"
+        android:background="#af736d6d"/>
+    <CheckBox
+        android:id="@+id/checkView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Whipped Cream"
+        android:padding="3dp" />
+    <EditText
+        android:id="@+id/NameEv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Your Name"
+        android:gravity="top"
+        android:padding="7dp"
+        android:inputType="text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:textSize="20sp"
+        android:padding="3dp"
+        android:text="QUANTITY"/>
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="1dp"
+        android:background="#af736d6d"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="3dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="2dp"
+            android:text="-"
+            android:layout_weight="1"
+            android:onClick="decrement"/>
+        <TextView
+            android:id="@+id/quantityTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="26sp"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="+"
+            android:onClick="increment"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:textSize="20sp"
+        android:layout_marginTop="4dp"
+        android:text="PRICE"
+        android:padding="3dp"
+        android:defaultFocusHighlightEnabled="true"/>
+    <TextView
+        android:layout_width="160dp"
+        android:layout_height="1dp"
+        android:background="#af736d6d"/>
+    <TextView
+        android:id="@+id/amtTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="5dp"
+        android:text="Rs.0"/>
+    <TextView
+        android:id="@+id/messageTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:padding="3dp"
+        android:text="WELCOME"
+        android:gravity="center|top"
+        android:layout_margin="3dp" />
 
-            android:layout_alignParentBottom="true">
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="ORDER"
-                android:layout_weight="1"
-                android:onClick="orderButton"/>
-            <Button
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="CLEAR"
-                android:onClick="clear"
-                android:layout_weight="1"/>
-        </LinearLayout>
-    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="orderButton"
+            android:text="ORDER" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="clear"
+            android:text="CLEAR" />
+    </LinearLayout>
+</LinearLayout>
