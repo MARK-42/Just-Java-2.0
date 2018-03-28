@@ -1,112 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     tools:context="com.projects.rtk154.justjava2.MainActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_margin="6dp">
+        android:layout_margin="6dp"
+        android:orientation="vertical">
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:textSize="20sp"
-            android:padding="3dp"
-            android:text="TOPPINGS"/>
+            style="@style/HeadingJJ"
+            android:text="TOPPINGS" />
+
         <TextView
             android:layout_width="160dp"
             android:layout_height="1dp"
-            android:background="#af736d6d"/>
+            android:background="#af736d6d" />
+
         <CheckBox
             android:id="@+id/checkView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Whipped Cream"
-            android:padding="3dp" />
+            android:padding="3dp"
+            android:text="Whipped Cream" />
+
         <EditText
             android:id="@+id/NameEv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Your Name"
             android:gravity="top"
-            android:padding="7dp"
-            android:inputType="text" />
+            android:hint="Enter Your Name"
+            android:inputType="text"
+            android:padding="7dp" />
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:textSize="20sp"
-            android:padding="3dp"
-            android:text="QUANTITY"/>
+            style="@style/HeadingJJ"
+            android:text="@string/quantiy" />
+
         <TextView
             android:layout_width="160dp"
             android:layout_height="1dp"
-            android:background="#af736d6d"/>
+            android:background="#af736d6d" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:padding="3dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:padding="3dp">
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="-"
                 android:layout_weight="1"
-                android:onClick="decrement"/>
+                android:onClick="decrement"
+                android:text="-" />
+
             <TextView
                 android:id="@+id/quantityTv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:textSize="26sp"
-                android:gravity="center"
                 android:layout_marginTop="4dp"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="26sp" />
+
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="+"
-                android:onClick="increment"/>
+                android:onClick="increment"
+                android:text="+" />
         </LinearLayout>
+
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="bottom"
-            android:textSize="20sp"
+            style="@style/HeadingJJ"
             android:layout_marginTop="4dp"
-            android:text="PRICE"
-            android:padding="3dp"
-            android:defaultFocusHighlightEnabled="true"/>
+            android:defaultFocusHighlightEnabled="true"
+            android:text="PRICE" />
+
         <TextView
             android:layout_width="160dp"
             android:layout_height="1dp"
-            android:background="#af736d6d"/>
+            android:background="#af736d6d" />
+
         <TextView
             android:id="@+id/amtTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="4dp"
             android:gravity="center"
             android:padding="3dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="5dp"
-            android:text="Rs.0"/>
+            android:text="Rs.0"
+            android:textSize="25sp" />
+
         <TextView
             android:id="@+id/messageTv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
+            android:layout_margin="3dp"
+            android:gravity="center|top"
             android:padding="3dp"
             android:text="WELCOME"
-            android:gravity="center|top"
-            android:layout_margin="3dp" />
+            android:textSize="25sp" />
 
 
         <LinearLayout
