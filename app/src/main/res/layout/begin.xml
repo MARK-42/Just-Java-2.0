@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#000">
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_launcher_foreground"
+        android:scaleType="centerCrop"/>
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_above="@id/Tv2"
+        android:id="@+id/cpTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="7dp"
+        android:text="@string/openingText"
+        android:textColor="#11d3e9"
+        android:textStyle=""
+        android:textSize="40sp" />
+    <TextView
+        android:id="@+id/Tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/openingText2"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="#0bacc2"
+        android:paddingBottom="60dp"
+        android:layout_above="@id/mpTv"/>
+    <TextView
+        android:id="@+id/mpTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/openingText3"
+        android:layout_marginBottom="12dp"
+        android:padding="5dp"
+        android:background="#e90303"
+        android:textColor="#fff"/>
+
+</RelativeLayout>

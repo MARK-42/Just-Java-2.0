@@ -3,6 +3,7 @@ package com.projects.rtk154.justjava2;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,18 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.begin);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+//                setContentView(R.layout.begin);
+                setContentView(R.layout.activity_main);
+                int a=5;
+            }
+        }, 3000);
+
+
     }
 
     void displayQuantity(int quantity) {
@@ -48,35 +60,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void orderButton(View view) {
-//        boolean checked=CheckView();
-//        if(checked)
-//            unitPrice+=2;
-//        else
-//            unitPrice=10;
-
         int TotalPrice = calculatePrice();
-       String msg = name();
-//        displayPrice(TotalPrice);
-//        displayMsg(msg);
-
-//        Intent intent = new Intent(Intent.ACTION_VIEW);
-//        intent.setData(Uri.parse("geo:47.6,-122.3"));
-//        if (intent.resolveActivity(getPackageManager()) != null) {
-//            startActivity(intent);
-        Intent intent = new Intent(Intent.ACTION_SENDTO);
-        intent.setData(Uri.parse("mailto:"));
-//        String a[0];
-        String a="ritikgupta15@ymail.com";
-        intent.putExtra(Intent.EXTRA_EMAIL,a);
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Custome Bill");
-        String msg1="Thank You for Ordering "+ msg+"\n..Vaelaar Dohairis..."+"Cost= "+TotalPrice;
-        intent.putExtra(Intent.EXTRA_TEXT,msg1);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-
-        }
-
+        String msg = name();
+        displayPrice(TotalPrice);
+        displayMsg(msg);
     }
+        void SendMail(View view) {
+            int TotalPrice = calculatePrice();
+            String msg = name();
+            Intent intent = new Intent(Intent.ACTION_SENDTO);
+            intent.setData(Uri.parse("mailto:"));
+            String a = "ritikgupta15@ymail.com";
+            intent.putExtra(Intent.EXTRA_EMAIL, a);
+            intent.putExtra(Intent.EXTRA_SUBJECT, "Custome Bill");
+            String msg1 = "Thank You for Ordering " + msg + "\n..Vaelaar Dohairis..." + "Cost= " + TotalPrice;
+            intent.putExtra(Intent.EXTRA_TEXT, msg1);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+                startActivity(intent);
+            }
+        }
 
     void increment(View view) {
         quantity++;
@@ -106,10 +108,10 @@ public class MainActivity extends AppCompatActivity {
         tv.setText("Rs. " + price);
     }
 
-//    void displayMsg(String msg) {
-//        TextView tv = (TextView) findViewById(R.id.messageTv);
-//        tv.setText("Thank You for Ordering "+ msg+"\n..Vaelaar Dohairis...");
-//    }
+    void displayMsg(String msg) {
+        TextView tv = (TextView) findViewById(R.id.messageTv);
+        tv.setText("Thank You for Ordering "+ msg+"\n..Vaelaar Dohairis...");
+    }
 
     void clear(View view)
     {

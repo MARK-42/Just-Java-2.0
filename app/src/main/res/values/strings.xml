@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Just Java 2</string>
     <string name="quantiy">QUANTITY</string>
+    <string name="openingText">Central Perk </string>
+    <string name="openingText2"> Your own coffee making App</string>
+    <string name="openingText3"> By MARK Productions</string>
 </resources>
